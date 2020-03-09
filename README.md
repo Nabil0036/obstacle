@@ -8,11 +8,11 @@ Course Name: Robotics Sessional
 
 Project Members: 15090(01, 02, 04, 05, 06, 07, 08, 09, 10)
 
-##Briefing:
+## Briefing:
 In this project, a 3 wheeled robot is made. It uses 2 pair of IR sensor in the front side for detecting obstacle.
 The rear wheel is powered by 2 gear motors. The processing unit is a Arduino Uno. Power is provided by LiPo battery.
 
-##Parts list:
+## Parts list:
 -Gear Motor    (2)
 -Wheel         (2)
 -Castor ball   (1)
@@ -20,5 +20,5 @@ The rear wheel is powered by 2 gear motors. The processing unit is a Arduino Uno
 -LiPo Battery  (1)
 -3D Printed Chassis (1)
 
-##Working Logic:
+## Working Logic:
 {coming soon}
