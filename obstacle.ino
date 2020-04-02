@@ -33,7 +33,7 @@ int rightena=5;
 int leftspeed=110;     
 int rightspeed=110;
 
-// Sonar pins
+// Sonar pins , kept for future use
 int trigPin = 4;
 int echoPin = 3;
 
@@ -59,7 +59,7 @@ void setup() {
 //Start of main program
 void loop() 
 {
-    long duration, distance;
+    long duration, distance; //will be used if sonar is used
     /*
     left and right IR sensors reading is put into variables named "left", "right".
     sensor value is: 
