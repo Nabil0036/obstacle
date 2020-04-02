@@ -21,17 +21,17 @@ int left_ir = 3;
 int right_ir = 2;   
 
 // Left and Right wheel Motor Driver pins
-int leftforward=10;
-int leftbackward=11;
+int leftforward = 10;
+int leftbackward = 11;
 
-int rightforward=8;
-int rightbackward=9;
+int rightforward = 8;
+int rightbackward = 9;
 
-int leftena=6;
-int rightena=5;
+int leftena = 6;
+int rightena = 5;
 
-int leftspeed=110;     
-int rightspeed=110;
+int leftspeed = 110;     
+int rightspeed = 110;
 
 // Sonar pins , kept for future use
 int trigPin = 4;
@@ -45,13 +45,13 @@ In this "setup" section, the used pins are set to work as
 input or output mode.
 */
 void setup() {
-    pinMode(leftforward,OUTPUT);
-    pinMode(rightforward,OUTPUT);
-    pinMode(leftbackward,OUTPUT);
-    pinMode(rightbackward,OUTPUT);
-    pinMode(2,INPUT);
-    pinMode(3,INPUT);
-    Serial.begin(9600);
+    pinMode( leftforward, OUTPUT );
+    pinMode( rightforward, OUTPUT );
+    pinMode( leftbackward, OUTPUT );
+    pinMode( rightbackward, OUTPUT );
+    pinMode( 2, INPUT );
+    pinMode( 3, INPUT );
+    Serial.begin( 9600 );
 }
 
 // ==================================== Main Program ( Section 2 )
@@ -91,43 +91,41 @@ All the user defined functions, that is used in the main loop, is defined and cr
 */
 
 void forward(){
-  analogWrite(leftena,leftspeed);
-  analogWrite(rightena,rightspeed);
+  analogWrite( leftena, leftspeed );
+  analogWrite( rightena, rightspeed );
 
-  digitalWrite(leftforward,HIGH);
-  digitalWrite(rightforward,HIGH);
-    digitalWrite(leftbackward,LOW);
-  digitalWrite(rightbackward,LOW);  
+  digitalWrite( leftforward, HIGH );
+  digitalWrite( rightforward, HIGH );
+  digitalWrite( leftbackward, LOW );
+  digitalWrite( rightbackward, LOW );  
 }
 
 void left(){
-  analogWrite(leftena,leftspeed);
-  analogWrite(rightena,rightspeed);
+  analogWrite( leftena, leftspeed );
+  analogWrite( rightena, rightspeed );
 
-
-  digitalWrite(leftforward,LOW);
-  digitalWrite(rightforward,HIGH);
-    digitalWrite(leftbackward,HIGH);
-  digitalWrite(rightbackward,LOW);
+  digitalWrite( leftforward, LOW );
+  digitalWrite( rightforward, HIGH );
+  digitalWrite( leftbackward, HIGH );
+  digitalWrite( rightbackward, LOW );
 }
 
 void right(){
-  analogWrite(leftena,leftspeed);
-  analogWrite(rightena,rightspeed);
+  analogWrite( leftena, leftspeed );
+  analogWrite( rightena, rightspeed );
 
-
-  digitalWrite(leftforward,HIGH);
-  digitalWrite(rightforward,LOW);
-    digitalWrite(leftbackward,LOW);
-  digitalWrite(rightbackward,HIGH);
+  digitalWrite( leftforward, HIGH );
+  digitalWrite( rightforward, LOW );
+  digitalWrite( leftbackward, LOW );
+  digitalWrite( rightbackward, HIGH );
 }
 
 void backward(){
-  analogWrite(leftena,leftspeed);
-  analogWrite(rightena,rightspeed);
+  analogWrite( leftena, leftspeed );
+  analogWrite( rightena, rightspeed );
 
-  digitalWrite(leftforward,LOW);
-  digitalWrite(rightforward,LOW);
-    digitalWrite(leftbackward,HIGH);
-  digitalWrite(rightbackward,HIGH);
+  digitalWrite( leftforward, LOW );
+  digitalWrite( rightforward, LOW );
+  digitalWrite( leftbackward, HIGH );
+  digitalWrite( rightbackward, HIGH );
 }
