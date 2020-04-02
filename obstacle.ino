@@ -60,7 +60,7 @@ void loop()
     long duration, distance;
       a = digitalRead(2)
       b = digitalRead(3)
-    if(a==0 && b==0)
+    if(a==0 && b==0)//if both sensor getting obstacle, 0 means obstacle and 1 means clear
         { right();}
     else if(a==0 && b==1)
         { left(); }
