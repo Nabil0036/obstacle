@@ -16,7 +16,9 @@ We have three component to declare
 
 // Start of pin and variable declaration
 
-int a,b;   // Left and Right IR sensor Receiver Pins
+// Left and Right IR sensor Receiver Pins
+int left_ir = 3;
+int right_ir = 2;   
 
 // Left and Right wheel Motor Driver pins
 int leftforward=10;
@@ -58,13 +60,22 @@ void setup() {
 void loop() 
 {
     long duration, distance;
-      a = digitalRead(2);
-      b = digitalRead(3);
-    if(a==0 && b==0)//if both sensor getting obstacle, 0 means obstacle and 1 means clear
+    /*
+    left and right IR sensors reading is put into variables named "left", "right".
+    sensor value is: 
+    0 when there is obstacle detectd.
+    1 when there is clear or no obstacle.
+    For detection, obstacle needs to be in close proximity of about 2-3 inches.
+    Detection will be less accurate if there is any other source of light visible.
+    */
+    left = digitalRead( left_ir );
+    right = digitalRead( right_ir );
+    
+    if( left == 0 && right == 0 )  // if both ir detects obstacle, then turn right
         { right();}
-    else if(a==0 && b==1)
+    else if( left == 1 && right == 0)
         { left(); }
-    else if(a==1 && b==0)
+    else if(left == 0 && right == 1 )
         { right(); }
     else
         { forward(); }
