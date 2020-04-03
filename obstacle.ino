@@ -6,13 +6,12 @@
 //==================================== Pin and Variable declaration ( Section 1 )
 
 /* 
-All Arduino Pins and Program Variables declaration is done in this section.
-We have three component to declare
-    a. 2 IR receivers
-    b. left wheel
-    c. right wheel 
-
-*/
+ *  All Arduino Pins and Program Variables declaration is done in this section.
+ *  We have three component to declare
+ *  a. 2 IR receivers
+ *  b. left wheel
+ *  c. right wheel 
+ */
 
 // Start of pin and variable declaration
 
