@@ -71,11 +71,11 @@ void loop()
     left = digitalRead( left_ir );
     right = digitalRead( right_ir );
     
-    if( left == 0 && right == 0 )  // if both ir detects obstacle, then turn right
+    if ( left == 0 && right == 0 )  // if both ir detects obstacle, then turn right
         { right();}
-    else if( left == 1 && right == 0)
+    else if ( left == 1 && right == 0)
         { left(); }
-    else if(left == 0 && right == 1 )
+    else if (left == 0 && right == 1 )
         { right(); }
     else
         { forward(); }
